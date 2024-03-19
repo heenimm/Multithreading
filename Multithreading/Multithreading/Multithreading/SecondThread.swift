@@ -38,7 +38,7 @@ final class TimerThread: Thread {
         }
         
         @objc func updateTimer() {
-            // Ваш код здесь будет выполняться каждую секунду
+            // Выполняется каждую секунду
             if timerDuration > 0 {
                 print("Осталось \(timerDuration) секунд...")
                 timerDuration -= 1
