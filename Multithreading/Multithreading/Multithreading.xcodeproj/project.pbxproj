@@ -19,6 +19,7 @@
 		7B9711AA2BAADB01003A0D4E /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711A92BAADB01003A0D4E /* QueueViewController.swift */; };
 		7B9711AC2BAADE4F003A0D4E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711AB2BAADE4F003A0D4E /* ThirdViewController.swift */; };
 		7B9711AE2BAADEEA003A0D4E /* SanitizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711AD2BAADEEA003A0D4E /* SanitizerViewController.swift */; };
+		7B9711B02BAAF0C3003A0D4E /* IsCancelledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711AF2BAAF0C3003A0D4E /* IsCancelledViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7B9711A92BAADB01003A0D4E /* QueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewController.swift; sourceTree = "<group>"; };
 		7B9711AB2BAADE4F003A0D4E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		7B9711AD2BAADEEA003A0D4E /* SanitizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanitizerViewController.swift; sourceTree = "<group>"; };
+		7B9711AF2BAAF0C3003A0D4E /* IsCancelledViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsCancelledViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				7B9711A92BAADB01003A0D4E /* QueueViewController.swift */,
 				7B9711AB2BAADE4F003A0D4E /* ThirdViewController.swift */,
 				7B9711AD2BAADEEA003A0D4E /* SanitizerViewController.swift */,
+				7B9711AF2BAAF0C3003A0D4E /* IsCancelledViewController.swift */,
 			);
 			path = Multithreading;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				7B9711AE2BAADEEA003A0D4E /* SanitizerViewController.swift in Sources */,
 				7B9711902BA98AD8003A0D4E /* AppDelegate.swift in Sources */,
 				7B9711922BA98AD8003A0D4E /* SceneDelegate.swift in Sources */,
+				7B9711B02BAAF0C3003A0D4E /* IsCancelledViewController.swift in Sources */,
 				7B9711A82BAAD993003A0D4E /* ThreadSanitizerViewController.swift in Sources */,
 				7B9711AC2BAADE4F003A0D4E /* ThirdViewController.swift in Sources */,
 				7B9711A62BAAB971003A0D4E /* PriorityViewController.swift in Sources */,
