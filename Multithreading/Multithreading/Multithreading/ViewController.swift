@@ -1,9 +1,6 @@
-//
 //  ViewController.swift
-//  Multithreading
-//
-//  Created by Халимка on 19.03.2024.
-//
+// Copyright © RoadMap. All rights reserved.
+
 
 import UIKit
 

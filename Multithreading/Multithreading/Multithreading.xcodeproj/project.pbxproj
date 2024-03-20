@@ -14,6 +14,11 @@
 		7B9711992BA98AD9003A0D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9711982BA98AD9003A0D4E /* Assets.xcassets */; };
 		7B97119C2BA98AD9003A0D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B97119A2BA98AD9003A0D4E /* LaunchScreen.storyboard */; };
 		7B9711A42BA98BC9003A0D4E /* SecondThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711A32BA98BC9003A0D4E /* SecondThread.swift */; };
+		7B9711A62BAAB971003A0D4E /* PriorityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711A52BAAB971003A0D4E /* PriorityViewController.swift */; };
+		7B9711A82BAAD993003A0D4E /* ThreadSanitizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711A72BAAD993003A0D4E /* ThreadSanitizerViewController.swift */; };
+		7B9711AA2BAADB01003A0D4E /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711A92BAADB01003A0D4E /* QueueViewController.swift */; };
+		7B9711AC2BAADE4F003A0D4E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711AB2BAADE4F003A0D4E /* ThirdViewController.swift */; };
+		7B9711AE2BAADEEA003A0D4E /* SanitizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711AD2BAADEEA003A0D4E /* SanitizerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		7B97119B2BA98AD9003A0D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B97119D2BA98AD9003A0D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B9711A32BA98BC9003A0D4E /* SecondThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondThread.swift; sourceTree = "<group>"; };
+		7B9711A52BAAB971003A0D4E /* PriorityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityViewController.swift; sourceTree = "<group>"; };
+		7B9711A72BAAD993003A0D4E /* ThreadSanitizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSanitizerViewController.swift; sourceTree = "<group>"; };
+		7B9711A92BAADB01003A0D4E /* QueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewController.swift; sourceTree = "<group>"; };
+		7B9711AB2BAADE4F003A0D4E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		7B9711AD2BAADEEA003A0D4E /* SanitizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanitizerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,11 @@
 				7B97119A2BA98AD9003A0D4E /* LaunchScreen.storyboard */,
 				7B97119D2BA98AD9003A0D4E /* Info.plist */,
 				7B9711A32BA98BC9003A0D4E /* SecondThread.swift */,
+				7B9711A52BAAB971003A0D4E /* PriorityViewController.swift */,
+				7B9711A72BAAD993003A0D4E /* ThreadSanitizerViewController.swift */,
+				7B9711A92BAADB01003A0D4E /* QueueViewController.swift */,
+				7B9711AB2BAADE4F003A0D4E /* ThirdViewController.swift */,
+				7B9711AD2BAADEEA003A0D4E /* SanitizerViewController.swift */,
 			);
 			path = Multithreading;
 			sourceTree = "<group>";
@@ -143,8 +158,13 @@
 			files = (
 				7B9711942BA98AD8003A0D4E /* ViewController.swift in Sources */,
 				7B9711A42BA98BC9003A0D4E /* SecondThread.swift in Sources */,
+				7B9711AA2BAADB01003A0D4E /* QueueViewController.swift in Sources */,
+				7B9711AE2BAADEEA003A0D4E /* SanitizerViewController.swift in Sources */,
 				7B9711902BA98AD8003A0D4E /* AppDelegate.swift in Sources */,
 				7B9711922BA98AD8003A0D4E /* SceneDelegate.swift in Sources */,
+				7B9711A82BAAD993003A0D4E /* ThreadSanitizerViewController.swift in Sources */,
+				7B9711AC2BAADE4F003A0D4E /* ThirdViewController.swift in Sources */,
+				7B9711A62BAAB971003A0D4E /* PriorityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
