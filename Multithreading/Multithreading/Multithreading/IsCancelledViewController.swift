@@ -14,7 +14,9 @@ class IsCancelledViewController: UIViewController {
         let infinityThread = InfinityLoop()
         infinityThread.start()
         sleep(2)
-        infinityThread.isCancelled
+        if infinityThread.counter > 4 {
+            infinityThread.cancel()
+        }
     }
 }
 
