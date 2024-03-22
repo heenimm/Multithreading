@@ -15,7 +15,8 @@ class Day3_Task4: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    //MARK: - 1
+    //MARK: - 1 // проблема в том что используется синхронная операция внутри асинхронной, на одной и той же очереди диспетчера и это приводит в дэдлоку. Следовательно sync блокирует поток  до завершения переданного замыкания, а async продолжает выполнение без ожидания выполнения переданного замыкания. Нужно изменить внутренний sync на async
+    
 //    let serialQueue = DispatchQueue(label: "com.example.myQueue")
 //
 //    serialQueue.async {
@@ -24,30 +25,39 @@ class Day3_Task4: UIViewController {
 //       }
 //    }
     
-    //MARK: - 2
+    //MARK: - 2 // В данном коде два асинхронных блока изменяют общий ресурс sharedResource, без синхронизации доступа к нему  - это может привести к гонке данных. Для решения данной проблемы необходимо синхронизировать доступ к критической секции с помощью мьютекса
+    
 //    override func viewDidLoad() {
 //           super.viewDidLoad()
 //           
 //           var sharedResource = 0
+//           var lock = Lock()
 //
 //           DispatchQueue.global(qos: .background).async {
 //               for _ in 1...100 {
+//                   lock.lock()
 //                   sharedResource += 1
+//                   lock.unlock()
 //               }
 //           }
 //
 //           DispatchQueue.global(qos: .background).async {
 //               for _ in 1...100 {
+//                   lock.lock()
 //                   sharedResource += 1
+//                   lock.unlock()
+
 //               }
 //           }
 //    }
 
     
-    //MARK: - 3
+    //MARK: - 3 // есть вероятность возникновения взаимной блокировки - deadlock. Можно решить с помощью добавления semaphore в метод walkPast
     
 //    class ViewController: UIViewController {
-//        
+//        var semaphore = DispatchSemaphore(value: 0)
+
+//
 //        override func viewDidLoad() {
 //            super.viewDidLoad()
 //            
@@ -55,13 +65,13 @@ class Day3_Task4: UIViewController {
 //            var people2 = People2()
 //            
 //            let thread1 = Thread {
-//                people1.walkPast(with: people2)
+//                people1.walkPast(with: people2, semaphore)
 //            }
 //
 //            thread1.start()
 //
 //            let thread2 = Thread {
-//                people2.walkPast(with: people1)
+//                people2.walkPast(with: people1, semaphore)
 //            }
 //
 //            thread2.start()
@@ -72,22 +82,27 @@ class Day3_Task4: UIViewController {
 //
 //    class People1 {
 //        var isDifferentDirections = false;
-//        
-//        func walkPast(with people: People2) {
+//
+//        func walkPast(with people: People2, semaphore: DispatchSemaphore) {
+//        semaphore.wait()
 //            while (!people.isDifferentDirections) {
 //                print("People1 не может обойти People2")
 //                sleep(1)
 //            }
-//            
+//
+//
 //            print("People1 смог пройти прямо")
 //            isDifferentDirections = true
+//            semaphore.signal()
 //        }
 //    }
 //
 //    class People2 {
 //        var isDifferentDirections = false;
 //        
-//        func walkPast(with people: People1) {
+//        func walkPast(with people: People1, semaphore: DispatchSemaphore) {
+//        semaphore.wait()
+
 //            while (!people.isDifferentDirections) {
 //                print("People2 не может обойти People1")
 //                sleep(1)
@@ -95,11 +110,13 @@ class Day3_Task4: UIViewController {
 //            
 //            print("People2 смог пройти прямо")
 //            isDifferentDirections = true
+//            semaphore.signal()
+
 //        }
 //    }
 
     
-    //MARK: - 4
+    //MARK: - 4 в этом коде возникает проблема livelock - потому что создается 2 потока каждый из которых пятается захватить два семафора, но из -за отсутствия сихнронизации возникает конфликт захвата и оба потока будут бесконечно ожидать освобождения ресурсов. Для решения этой проблемы необходимо захватывать семафоры в одном и том же порядке
     
 //    class RecipeViewController: UIViewController {
 //        
@@ -116,8 +133,7 @@ class Day3_Task4: UIViewController {
 //                self.thread2()
 //            }
 //        }
-//        
-//      
+//
 //
 //        let resourceASemaphore = DispatchSemaphore(value: 1)
 //        let resourceBSemaphore = DispatchSemaphore(value: 1)
