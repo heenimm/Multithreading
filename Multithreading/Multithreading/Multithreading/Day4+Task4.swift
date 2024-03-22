@@ -7,6 +7,8 @@
 
 import UIKit
 
+///Race condition  - два потока пытаются менять общий массив, нужно использовать мьютекс для разграничения доступа
+
 class Day4_Task4: UIViewController {        
       
         override func viewDidLoad() {
@@ -17,10 +19,10 @@ class Day4_Task4: UIViewController {
             let operationQueue = OperationQueue()
 
             let firstOperation = FirstOperation(threadSafeArray: threadSafeArray)
-            let secondOperation = SecondOperation(threadSafeArray: threadSafeArray)
-
+//            let secondOperation = SecondOperation(threadSafeArray: threadSafeArray)
+//
             operationQueue.addOperation(firstOperation)
-            operationQueue.addOperation(secondOperation)
+//            operationQueue.addOperation(secondOperation)
 
             // Дождитесь завершения операций перед выводом содержимого массива
             operationQueue.waitUntilAllOperationsAreFinished()
@@ -30,17 +32,23 @@ class Day4_Task4: UIViewController {
     }
 
     // Объявляем класс для для синхронизации потоков
-    class ThreadSafeArray {
-        private var array: [String] = []
+class ThreadSafeArray {
+    private var array: [String] = []
+    private let lock = NSLock()
 
-        func append(_ item: String) {
-            array.append(item)
-        }
-
-        func getAll() -> [String] {
-            return array
-        }
+    func append(_ item: String) {
+        lock.lock()
+        defer { lock.unlock() }
+        array.append(item)
     }
+
+    func getAll() -> [String] {
+        lock.lock()
+        defer { lock.unlock() }
+        return array
+    }
+}
+
 
     // Определяем первую операцию для добавления строки в массив
     class FirstOperation: Operation {

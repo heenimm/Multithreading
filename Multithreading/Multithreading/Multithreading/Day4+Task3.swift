@@ -1,66 +1,40 @@
-//
-//  Day4+Task3.swift
-//  Multithreading
-//
-//  Created by Халимка on 22.03.2024.
-//
-
 import UIKit
 
-class Day4_Task3: UIViewController {
-    
+class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        let rmOperationQueue = RMOperationQueue()
-        
-        let rmOperation1 = RMOperation()
-        rmOperation1.priority = .background
-        
-        rmOperation1.completionBlock = {
-            print(1)
+
+        let operationQueue = OperationQueue()
+
+        let operation1 = MyOperation()
+        operation1.queuePriority = .low
+        operation1.completionBlock = {
+            print("Operation 1 completed")
         }
-        
-        let rmOperation2 = RMOperation()
-        rmOperation2.priority = .userInteractive
-        
-        rmOperation2.completionBlock = {
-            print(2)
+
+        let operation2 = MyOperation()
+        operation2.queuePriority = .high
+        operation2.completionBlock = {
+            print("Operation 2 completed")
         }
-        
-        
-        rmOperationQueue.addOperation(rmOperation1)
-        rmOperationQueue.addOperation(rmOperation2)
-        
+
+        operationQueue.addOperation(operation1)
+        operationQueue.addOperation(operation2)
     }
 }
 
-protocol RMOperationQueueProtocol {
-    /// Тут храним пул наших операций
-    var operations: [RMOperation] { get }
-    /// Добавляем наши кастомные операции в пул operations
-    func addOperation(_ operation: RMOperation)
-    /// Запускаем следующую
-    func executeNextOperation()
-}
+class MyOperation: Operation {
+    override func main() {
+        if isCancelled {
+            return
+        }
 
-// Класс, управляющий очередью операций
-final class RMOperationQueue: RMOperationQueueProtocol {
-    var operations: [RMOperation] = []
-    
-    func addOperation(_ operation: RMOperation) {
-        operations.append(operation)
-        executeNextOperation()
-    }
-    
-    func executeNextOperation() {
-        if let nextOperation = operations.first(where: { !$0.isExecuting && !$0.isFinished }) {
-            /// Тут делаем старт операции
-            
-            /// Тут рекурсивно запускаем следующую операцию (что такое рекурсия?)
+        // Выполнение основной работы операции здесь
+        for _ in 0..<50 {
+            print("Operation executed")
         }
     }
 }
 
-
+let viewController = RecipeViewController()
+//viewController.viewDidLoad()

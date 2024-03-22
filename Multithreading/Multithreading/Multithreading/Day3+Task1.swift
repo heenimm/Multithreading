@@ -7,31 +7,41 @@
 
 import UIKit
 
-actor Day3_Task1 {
+class Day3_Task1: UIViewController {
     
-    init() {
-        var semaphore = DispatchSemaphore(value: 1)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var semaphore = DispatchSemaphore(value: 0)
+        
         var phrasesService = PhrasesService()
-        DispatchQueue.global.async {
-            semaphore.wait()
-            for i in 1..<10 {
+        
+        for i in 1..<10 {
+            DispatchQueue.global().async {
                 phrasesService.addPhrase("Phrase \(i)")
-                
-                semaphore.signal()
+                print(Thread.current)
             }
-            Thread.sleep(forTimeInterval: 1)
-            print(phrasesService.phrases)
         }
+        Thread.sleep(forTimeInterval: 1)
+        
+        semaphore.wait()
+//        print(phrasesService.phrases)
+        semaphore.signal()
+        
     }
     
 }
-    
 
-    
-class PhrasesService {
+
+
+actor PhrasesService {
     var phrases: [String] = []
+    var semaphore = DispatchSemaphore(value: 1)
+    
     
     func addPhrase(_ phrase: String) {
+        semaphore.wait()
         phrases.append(phrase)
+        semaphore.signal()
+        
     }
 }

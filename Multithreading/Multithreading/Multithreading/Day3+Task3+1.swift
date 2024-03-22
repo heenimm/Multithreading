@@ -9,11 +9,11 @@ import UIKit
 
 ///В каком порядке отработают все принты
 class Day3_Task3_1: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-print("R")
-let lock = NSLock()
+        print("R")
+        let lock = NSLock()
         DispatchQueue.global().async {
             lock.lock()
             print("A")
@@ -29,6 +29,6 @@ let lock = NSLock()
     }
 }
 
-
-///Почему вывелись не все принты
+///ROA
+///Почему вывелись не все принты - потому что
 ///Исправить код чтобы вывелись все принты

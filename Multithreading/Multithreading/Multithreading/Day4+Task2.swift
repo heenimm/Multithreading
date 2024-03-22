@@ -7,57 +7,40 @@
 
 import UIKit
 
+import Foundation
 
-    protocol RMOperationProtocol {
-        // Приоритеты
-        var priority: DispatchQoS.QoSClass { get }
-        // Выполняемый блок
-        var completionBlock: (() -> Void)? { get }
-        // Завершена ли операция
-        var isFinished: Bool { get }
-        // Метод для запуска операции
-        func start()
+protocol RMOperationProtocol {
+    var priority: DispatchQoS.QoSClass { get }
+    var completionBlock: (() -> Void)? { get }
+    var isFinished: Bool { get }
+    func start()
+}
+
+class RMOperation: RMOperationProtocol {
+    var priority: DispatchQoS.QoSClass = .default
+    var completionBlock: (() -> Void)?
+    private var finished: Bool = false
+    var isFinished: Bool {
+        return finished
     }
-
-    class RMOperation: RMOperationProtocol {
-        
-        /// В методе start. реализуйте все через глобальную паралельную очередь с приоритетами.
-     
-    }
-
-class Day4_Task2: UIViewController {
-    override func viewDidLoad() {
-            super.viewDidLoad()
-            
-           
-            let operationFirst = RMOperation()
-            let operationSecond = RMOperation()
-            
-           
-            operationFirst.priority = .userInitiated
-            operationFirst.completionBlock = {
-                
-                for _ in 0..<50 {
-                    print(2)
-                }
-                print(Thread.current)
-                print("Операция полностью завершена!")
-            }
-           
-            operationFirst.start()
-            
-
-            
-            operationSecond.priority = .background
-            operationSecond.completionBlock = {
-              
-                for _ in 0..<50 {
-                    print(1)
-                }
-                print(Thread.current)
-                print("Операция полностью завершена!")
-            }
-            operationSecond.start()
-
+    
+    func start() {
+        DispatchQueue.global(qos: priority).async {
+            self.main()
         }
+    }
+    
+    private func main() {
+        // Здесь выполняется основная работа операции
+        for _ in 0..<50 {
+            print("Operation executed")
+        }
+        
+        // Помечаем операцию как завершенную
+        finished = true
+        
+        // Вызываем блок завершения, если он был установлен
+        completionBlock?()
+    }
+}
 
