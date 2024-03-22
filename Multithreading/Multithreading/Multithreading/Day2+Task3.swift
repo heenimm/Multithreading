@@ -19,15 +19,15 @@ class ThreadSanitizerViewController: UIViewController {
         }
         
         func updateName() {
-            lock.async {
+//            lock.async {
                 self.name = "I love RM"
                 print(Thread.current)
                 print(self.name)
-            }
+//            }
                 
-            lock.sync {
+//            lock.sync {
                 print(self.name)
-            }
+//            }
         }
 }
 
