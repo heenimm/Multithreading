@@ -9,23 +9,53 @@
 /* Begin PBXBuildFile section */
 		7B9711902BA98AD8003A0D4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97118F2BA98AD8003A0D4E /* AppDelegate.swift */; };
 		7B9711922BA98AD8003A0D4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711912BA98AD8003A0D4E /* SceneDelegate.swift */; };
-		7B9711942BA98AD8003A0D4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711932BA98AD8003A0D4E /* ViewController.swift */; };
+		7B9711942BA98AD8003A0D4E /* Day1+Task1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711932BA98AD8003A0D4E /* Day1+Task1.swift */; };
 		7B9711972BA98AD8003A0D4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9711952BA98AD8003A0D4E /* Main.storyboard */; };
 		7B9711992BA98AD9003A0D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9711982BA98AD9003A0D4E /* Assets.xcassets */; };
 		7B97119C2BA98AD9003A0D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B97119A2BA98AD9003A0D4E /* LaunchScreen.storyboard */; };
-		7B9711A42BA98BC9003A0D4E /* SecondThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711A32BA98BC9003A0D4E /* SecondThread.swift */; };
+		7B9711A42BA98BC9003A0D4E /* Day2+Task1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711A32BA98BC9003A0D4E /* Day2+Task1.swift */; };
+		7B9711A62BAAB971003A0D4E /* Day2+Task2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711A52BAAB971003A0D4E /* Day2+Task2.swift */; };
+		7B9711A82BAAD993003A0D4E /* Day2+Task3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711A72BAAD993003A0D4E /* Day2+Task3.swift */; };
+		7B9711AA2BAADB01003A0D4E /* Day2+Task4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711A92BAADB01003A0D4E /* Day2+Task4.swift */; };
+		7B9711AC2BAADE4F003A0D4E /* Day2+Task5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711AB2BAADE4F003A0D4E /* Day2+Task5.swift */; };
+		7B9711AE2BAADEEA003A0D4E /* Day2+Task6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711AD2BAADEEA003A0D4E /* Day2+Task6.swift */; };
+		7B9711B02BAAF0C3003A0D4E /* Day2+Task7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711AF2BAAF0C3003A0D4E /* Day2+Task7.swift */; };
+		7B9711B22BAC12DB003A0D4E /* Day3+Task1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711B12BAC12DB003A0D4E /* Day3+Task1.swift */; };
+		7B9711B42BAC2ED1003A0D4E /* Day3+Task2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711B32BAC2ED1003A0D4E /* Day3+Task2.swift */; };
+		7B9711B62BAC2EE3003A0D4E /* Day3+Task3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711B52BAC2EE3003A0D4E /* Day3+Task3.swift */; };
+		7B9711B82BAC2EFB003A0D4E /* Day3+Task4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711B72BAC2EFB003A0D4E /* Day3+Task4.swift */; };
+		7B9711BA2BAD72B7003A0D4E /* Day3+Task3+1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711B92BAD72B7003A0D4E /* Day3+Task3+1.swift */; };
+		7B9711BC2BAD754A003A0D4E /* Day4+Task1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711BB2BAD754A003A0D4E /* Day4+Task1.swift */; };
+		7B9711BE2BAD7555003A0D4E /* Day4+Task2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711BD2BAD7555003A0D4E /* Day4+Task2.swift */; };
+		7B9711C02BAD756A003A0D4E /* Day4+Task3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711BF2BAD756A003A0D4E /* Day4+Task3.swift */; };
+		7B9711C22BAD7823003A0D4E /* Day4+Task4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9711C12BAD7823003A0D4E /* Day4+Task4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B97118C2BA98AD8003A0D4E /* Multithreading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multithreading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B97118F2BA98AD8003A0D4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B9711912BA98AD8003A0D4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B9711932BA98AD8003A0D4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B9711932BA98AD8003A0D4E /* Day1+Task1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day1+Task1.swift"; sourceTree = "<group>"; };
 		7B9711962BA98AD8003A0D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B9711982BA98AD9003A0D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B97119B2BA98AD9003A0D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B97119D2BA98AD9003A0D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B9711A32BA98BC9003A0D4E /* SecondThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondThread.swift; sourceTree = "<group>"; };
+		7B9711A32BA98BC9003A0D4E /* Day2+Task1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day2+Task1.swift"; sourceTree = "<group>"; };
+		7B9711A52BAAB971003A0D4E /* Day2+Task2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day2+Task2.swift"; sourceTree = "<group>"; };
+		7B9711A72BAAD993003A0D4E /* Day2+Task3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day2+Task3.swift"; sourceTree = "<group>"; };
+		7B9711A92BAADB01003A0D4E /* Day2+Task4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day2+Task4.swift"; sourceTree = "<group>"; };
+		7B9711AB2BAADE4F003A0D4E /* Day2+Task5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day2+Task5.swift"; sourceTree = "<group>"; };
+		7B9711AD2BAADEEA003A0D4E /* Day2+Task6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day2+Task6.swift"; sourceTree = "<group>"; };
+		7B9711AF2BAAF0C3003A0D4E /* Day2+Task7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day2+Task7.swift"; sourceTree = "<group>"; };
+		7B9711B12BAC12DB003A0D4E /* Day3+Task1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day3+Task1.swift"; sourceTree = "<group>"; };
+		7B9711B32BAC2ED1003A0D4E /* Day3+Task2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day3+Task2.swift"; sourceTree = "<group>"; };
+		7B9711B52BAC2EE3003A0D4E /* Day3+Task3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day3+Task3.swift"; sourceTree = "<group>"; };
+		7B9711B72BAC2EFB003A0D4E /* Day3+Task4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day3+Task4.swift"; sourceTree = "<group>"; };
+		7B9711B92BAD72B7003A0D4E /* Day3+Task3+1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day3+Task3+1.swift"; sourceTree = "<group>"; };
+		7B9711BB2BAD754A003A0D4E /* Day4+Task1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day4+Task1.swift"; sourceTree = "<group>"; };
+		7B9711BD2BAD7555003A0D4E /* Day4+Task2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day4+Task2.swift"; sourceTree = "<group>"; };
+		7B9711BF2BAD756A003A0D4E /* Day4+Task3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day4+Task3.swift"; sourceTree = "<group>"; };
+		7B9711C12BAD7823003A0D4E /* Day4+Task4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day4+Task4.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +90,27 @@
 			children = (
 				7B97118F2BA98AD8003A0D4E /* AppDelegate.swift */,
 				7B9711912BA98AD8003A0D4E /* SceneDelegate.swift */,
-				7B9711932BA98AD8003A0D4E /* ViewController.swift */,
+				7B9711932BA98AD8003A0D4E /* Day1+Task1.swift */,
 				7B9711952BA98AD8003A0D4E /* Main.storyboard */,
 				7B9711982BA98AD9003A0D4E /* Assets.xcassets */,
 				7B97119A2BA98AD9003A0D4E /* LaunchScreen.storyboard */,
 				7B97119D2BA98AD9003A0D4E /* Info.plist */,
-				7B9711A32BA98BC9003A0D4E /* SecondThread.swift */,
+				7B9711A32BA98BC9003A0D4E /* Day2+Task1.swift */,
+				7B9711B12BAC12DB003A0D4E /* Day3+Task1.swift */,
+				7B9711B32BAC2ED1003A0D4E /* Day3+Task2.swift */,
+				7B9711B52BAC2EE3003A0D4E /* Day3+Task3.swift */,
+				7B9711B72BAC2EFB003A0D4E /* Day3+Task4.swift */,
+				7B9711A52BAAB971003A0D4E /* Day2+Task2.swift */,
+				7B9711A72BAAD993003A0D4E /* Day2+Task3.swift */,
+				7B9711A92BAADB01003A0D4E /* Day2+Task4.swift */,
+				7B9711AB2BAADE4F003A0D4E /* Day2+Task5.swift */,
+				7B9711AD2BAADEEA003A0D4E /* Day2+Task6.swift */,
+				7B9711AF2BAAF0C3003A0D4E /* Day2+Task7.swift */,
+				7B9711B92BAD72B7003A0D4E /* Day3+Task3+1.swift */,
+				7B9711BB2BAD754A003A0D4E /* Day4+Task1.swift */,
+				7B9711BD2BAD7555003A0D4E /* Day4+Task2.swift */,
+				7B9711BF2BAD756A003A0D4E /* Day4+Task3.swift */,
+				7B9711C12BAD7823003A0D4E /* Day4+Task4.swift */,
 			);
 			path = Multithreading;
 			sourceTree = "<group>";
@@ -141,10 +186,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B9711942BA98AD8003A0D4E /* ViewController.swift in Sources */,
-				7B9711A42BA98BC9003A0D4E /* SecondThread.swift in Sources */,
+				7B9711C02BAD756A003A0D4E /* Day4+Task3.swift in Sources */,
+				7B9711942BA98AD8003A0D4E /* Day1+Task1.swift in Sources */,
+				7B9711A42BA98BC9003A0D4E /* Day2+Task1.swift in Sources */,
+				7B9711AA2BAADB01003A0D4E /* Day2+Task4.swift in Sources */,
+				7B9711AE2BAADEEA003A0D4E /* Day2+Task6.swift in Sources */,
+				7B9711BA2BAD72B7003A0D4E /* Day3+Task3+1.swift in Sources */,
 				7B9711902BA98AD8003A0D4E /* AppDelegate.swift in Sources */,
 				7B9711922BA98AD8003A0D4E /* SceneDelegate.swift in Sources */,
+				7B9711B22BAC12DB003A0D4E /* Day3+Task1.swift in Sources */,
+				7B9711B02BAAF0C3003A0D4E /* Day2+Task7.swift in Sources */,
+				7B9711B42BAC2ED1003A0D4E /* Day3+Task2.swift in Sources */,
+				7B9711A82BAAD993003A0D4E /* Day2+Task3.swift in Sources */,
+				7B9711AC2BAADE4F003A0D4E /* Day2+Task5.swift in Sources */,
+				7B9711BC2BAD754A003A0D4E /* Day4+Task1.swift in Sources */,
+				7B9711B62BAC2EE3003A0D4E /* Day3+Task3.swift in Sources */,
+				7B9711B82BAC2EFB003A0D4E /* Day3+Task4.swift in Sources */,
+				7B9711C22BAD7823003A0D4E /* Day4+Task4.swift in Sources */,
+				7B9711BE2BAD7555003A0D4E /* Day4+Task2.swift in Sources */,
+				7B9711A62BAAB971003A0D4E /* Day2+Task2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

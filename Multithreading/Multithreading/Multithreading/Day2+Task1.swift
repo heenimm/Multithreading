@@ -1,9 +1,6 @@
-//
 //  SecondThread.swift
-//  Multithreading
-//
-//  Created by Халимка on 19.03.2024.
-//
+// Copyright © RoadMap. All rights reserved.
+
 
 import UIKit
 
@@ -38,7 +35,7 @@ final class TimerThread: Thread {
         }
         
         @objc func updateTimer() {
-            // Ваш код здесь будет выполняться каждую секунду
+            // Выполняется каждую секунду
             if timerDuration > 0 {
                 print("Осталось \(timerDuration) секунд...")
                 timerDuration -= 1
