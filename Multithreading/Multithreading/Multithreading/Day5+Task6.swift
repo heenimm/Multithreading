@@ -19,20 +19,20 @@ class Day5_Task6: UIViewController {
 
     func printMessage() async {
         let string = await withTaskGroup(of: String.self) { group -> String in
-            group.addTask {
-                "Hello"
+             group.addTask {
+                 await self.printHello()
             }
-            group.addTask {
-                "My"
+             group.addTask {
+                await self.printMy()
             }
-            group.addTask {
-                "Road"
+             group.addTask {
+                 await self.printRoad()
             }
-            group.addTask {
-                "Map"
+             group.addTask {
+                 await self.printMap()
             }
-            group.addTask {
-                "Group"
+             group.addTask {
+                 await self.printGroup()
             }
             var collected = [String]()
             for await value in group  {
@@ -41,6 +41,26 @@ class Day5_Task6: UIViewController {
             return collected.joined(separator: " ")
         }
         print(string)
+    }
+    
+    func printHello() async -> String {
+       return "Hello"
+    }
+    
+    func printMy() async -> String {
+        return "My"
+    }
+    
+    func printRoad() async -> String {
+        return "Road"
+    }
+    
+    func printMap() async -> String {
+        return "Map"
+    }
+    
+    func printGroup() async -> String {
+        return "Group"
     }
 
 }
