@@ -11,9 +11,9 @@ class Day3_Task1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var semaphore = DispatchSemaphore(value: 0)
+        let semaphore = DispatchSemaphore(value: 0)
         
-        var phrasesService = PhrasesService()
+        let phrasesService = PhrasesService()
         
         for i in 1..<10 {
             DispatchQueue.global().async {
